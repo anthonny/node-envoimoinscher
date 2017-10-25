@@ -11,6 +11,7 @@ function setupRequest(resource){
     var country = arguments.length === 3 ? arguments[1] : "FR";
     var cb = arguments[arguments.length-1];
 
+    conf.options.method = "GET";
     request({
       resource: resource.
         replace("{id}", id).
