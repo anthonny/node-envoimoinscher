@@ -25,6 +25,7 @@ function quotation(json, cb){
   joi.validate(json, model.quotation, function(err, validQuotation){
     if(err) return cb(err);
 
+    conf.options.method = "GET";
     request({
       resource: "/cotation",
       json: validQuotation,
